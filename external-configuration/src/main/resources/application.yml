@@ -1,0 +1,20 @@
+server:
+  port: "9000"
+
+pageController:
+  msg: "Hello from yaml config"
+  foo: "foo"
+  bar: "bar"
+  
+my:
+  secret: ${random.value}
+  bigNumber: ${random.long}
+  number: 
+    number: ${random.int}
+    less:
+      than:
+        ten: ${random.int(10)}
+    in:
+      range: ${random.int[1024, 65536]}
+
+  
