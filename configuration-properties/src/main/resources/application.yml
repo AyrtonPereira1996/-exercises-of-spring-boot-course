@@ -1,0 +1,6 @@
+myconfig: 
+  app-name: "My Application Name"
+  app-description: "${myconfig.app-name} is a spring boot application"
+  admin-first-name: "Ayrton"
+  admin-last-name: "Pereira"
+  admin-email: "ayrton_pereira1996@hotmail.com"   
