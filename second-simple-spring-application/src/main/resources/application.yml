@@ -1,0 +1,9 @@
+app:
+  config:
+    name: "${spring.application.name}"
+    author: "Ayrton Pereira"
+    programmer: "${app.config.author}"
+    year-creation: "2024"
+    msg: "Esta aplicação Spring foi criada por ${app.config.author}, no ano ${app.config.year-creation} e o programador também é o ${app.config.programmer}"
+    
+    
