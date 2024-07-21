@@ -1,0 +1,8 @@
+environments:
+  development:
+    url: "url teste"
+    name: "Teste name development"
+  production:
+    url: "url teste"
+    name: "teste name production"
+    
