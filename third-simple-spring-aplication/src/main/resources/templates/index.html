@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" th:href="@{../webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+	<link rel="stylesheet" th:href="@{../css/style.css}">
+
+	<title>Third Simple Spring Aplication</title>
+</head>
+
+<body>
+
+
+	<nav class="navbar bg-body-tertiary bg-primary" data-bs-theme="dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">Third Simple Spring Aplication</a>
+		</div>
+	</nav>
+
+	<div class="container text-center mt-2 main-container">
+		<div class="row">
+
+
+			<div class="col-12">
+
+				<p><a th:href="@{/detalhes-funcionario/1}" class="link-underline-warning"><span class="picture-person "></span>Funcionário 1</a></p>
+				<p><a th:href="@{/detalhes-funcionario/2}" class="link-underline-warning"><span class="picture-person"></span>Funcionário 2</a></p>
+				<p><a th:href="@{/detalhes-funcionario/3}" class="link-underline-warning"><span class="picture-person"></span>Funcionário 3</a></p>
+				<p><a th:href="@{/detalhes-funcionario/4}" class="link-underline-warning"><span class="picture-person"></span>Funcionário 4</a></p>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="container mt-2 text-center second-container">
+
+		<div class="row">
+			<div class="col-12">
+				<p th:if="${codigoFuncionario != null}" class="mt-2 fw-bold">Descrição do Funcionário: <span th:text="${codigoFuncionario}">[Códido de Identificação do funcionário]</span></p>
+				<p th:if="${codigoFuncionario == null}" class="mt-2 fw-bold">Descrição do Funcionário: <span >[Sem Registo de Códido de Identificação do funcionário]</span></p>
+								
+				<p th:if="${nomeFuncionario != null}" class="text-start"><span class="fw-semibold">Nome Completo: </span><span class="text-uppercase" th:text="${nomeFuncionario}  + ' ' + ${apelidoFuncionario}">[Sem Registo]</span></span> </p>
+				<p th:if="${nomeFuncionario == null}" class="text-start"><span class="fw-semibold">Nome Completo: </span><span class="text-uppercase">[Sem Registo de Nome de Funcionario]</span></span> </p>
+								
+				<p th:if="${cargoFuncionario != null}" class="text-start"><span class="fw-semibold">Cargo que ocupa: </span><span class="text-uppercase" th:text="${cargoFuncionario}"></span> </p>
+				<p th:if="${cargoFuncionario == null}" class="text-start"><span class="fw-semibold">Cargo que ocupa: </span><span class="text-uppercase">[Sem Registo de Cargo de Funcionario]</span> </p>
+				
+				<p th:if="${anoNascimento != null}" class="text-start"><span class="fw-semibold">Idade: </span><span class="text-uppercase" th:text="${#dates.year(#dates.createNow())-anoNascimento}"></span> </p>
+				<p th:if="${anoNascimento == null}" class="text-start"><span class="fw-semibold">Idade: </span><span class="text-uppercase">[Sem Registo de Idade de Funcionario]</span> </p>
+				
+				<p th:if="${salarioLiquido != null}" class="text-start"><span class="fw-semibold">Salario Líquido: </span><span class="text-uppercase" th:text="${salarioLiquido} + ' mt'"></span> </p>
+				<p th:if="${salarioLiquido == null}" class="text-start"><span class="fw-semibold">Salario Líquido: </span><span class="text-uppercase" >[Sem Registo de Cargo de Funcionario]</span> </p>
+				
+				<p th:if="${dataContrato != null}" class="text-start"><span class="fw-semibold">Data de assinatura de contrato: </span><span class="text-uppercase"  th:text="${#dates.format(dataContrato, 'dd - MMMM - yyyy' )}"></span> </p>
+				<p th:if="${dataContrato == null}" class="text-start"><span class="fw-semibold">Data de assinatura de contrato: </span><span class="text-uppercase">[Sem Registo de Data de Assinatura de contrato de Funcionario]</span> </p>
+				
+			</div>
+
+		</div>
+
+	</div>
+
+	<script th:src="@{/scripts/scripts.js}"></script>
+	<script th:src="@{../webjars/bootstrap/5.3.3/js/bootstrap.min.js}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+h1 {
+	font-weight: bold;
+}
+
+.picture-person {
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	border: 2px solid rgb(36, 31, 49);
+	padding: 5px;
+	color: black;
+	font-size: 10px;
+	margin-right: 10px;
+
+}
+
+.picture-person::before {
+	content: "?";
+	font-size: 25px;
+}
+
+.container ul {
+	list-style: none;
+}
+
+.container.main-container {
+	width: auto;
+	background-color: beige;
+	height: auto;
+	padding: 5px;
+}
+
+.container.main-container p {
+	width: auto;
+}
+
+.container.second-container {
+	width: 1200px;
+	height: auto;
+	background-color: bisque;
+	
+}

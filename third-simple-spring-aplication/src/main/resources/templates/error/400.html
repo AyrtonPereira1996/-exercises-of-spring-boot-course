@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" th:href="@{../webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+	<link rel="stylesheet" th:href="@{../css/style.css}">
+
+	<title>Third Simple Spring Aplication</title>
+</head>
+
+<body>
+
+
+	<nav class="navbar bg-body-tertiary bg-primary" data-bs-theme="dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">Third Simple Spring Aplication</a>
+		</div>
+	</nav>
+
+	<div class="container text-center mt-2 main-container">
+		<div class="row">
+			<div class="col-12 p-4">
+				<h1 class="h1">Lamentamos pelo transtorno! Erro de servidor que não pode ou não irá processar a requisição...</h1>
+				<p class="text-start"><span class="fw-semibold">Detalhes do erro:</span> <span th:text="${errorTitle} + ': ' + ${errorMessage}"></span></p>
+				<p class="text-start"><span class="fw-semibold">Codigo do erro:</span> <span th:text="${errorCode}"></span></p>
+				<a type="button" class="btn btn-sm btn-dark" th:href="@{../}">Voltar Página Inicial</a>
+			</div>
+
+
+		</div>
+
+	</div>
+
+
+	<script th:src="@{/scripts/scripts.js}"></script>
+	<script th:src="@{/bootstrap/5.3.3/js/bootstrap.min.js}"></script>
+
+</body>
+
+</html>
