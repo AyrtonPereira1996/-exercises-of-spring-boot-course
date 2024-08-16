@@ -1,4 +1,0 @@
-INSERT INTO AUTHOR(ID, FIRST_NAME, LAST_NAME) values(1,'Dan','Vega');
-INSERT INTO AUTHOR(ID, FIRST_NAME, LAST_NAME) values(2,'Ayrton','Pereira');
-
-
